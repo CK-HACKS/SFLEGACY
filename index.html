@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SF LEGACY</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        /* --- Color Palette (Aapke image se) --- */
+        :root {
+            --bg-dark: #0C0E0B;       /* Main Background */
+            --accent-red: #DB2E40;     /* Highlight Red */
+            --text-light: #DEF3FF;    /* Light Blue-White Text */
+            --text-cream: #FEFAEF;    /* Creamy White Text (for bio) */
+        }
+
+        /* --- Basic Setup --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-light);
+            
+            /* Dynamic Animated Gradient Background */
+            background: linear-gradient(-45deg, #0c0e0b, #1a0a0d, #0c0e0b, #300f14);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            
+            /* Center content */
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* --- Keyframe for BG Animation --- */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* --- Main Content Card --- */
+        .container {
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            padding: 30px;
+            background: rgba(12, 14, 11, 0.5); /* Semi-transparent dark bg */
+            border: 1px solid rgba(219, 46, 64, 0.2); /* Faint red border */
+            border-radius: 20px;
+            backdrop-filter: blur(10px); /* Glass effect */
+            -webkit-backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(219, 46, 64, 0.15); /* Soft red glow */
+        }
+
+        /* --- Logo Image Styling --- */
+        .logo-img {
+            width: 120px;           /* Logo width */
+            height: 120px;          /* Logo height */
+            border-radius: 50%;     /* Makes it a perfect circle */
+            object-fit: cover;      /* Ensures image covers the circle without distortion */
+            border: 3px solid var(--accent-red); /* Red border around logo */
+            box-shadow: 0 0 20px rgba(219, 46, 64, 0.5); /* Red glow effect */
+            margin: 0 auto 20px auto; /* Centered with bottom margin */
+            display: block; /* Ensures proper centering */
+        }
+        
+        /* --- Text Content --- */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-light);
+            text-shadow: 0 0 15px rgba(219, 46, 64, 0.7);
+        }
+
+        .bio {
+            font-size: 1rem;
+            color: var(--text-cream);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        /* --- Link Buttons Container --- */
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* --- Individual Link Button --- */
+        .link-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            
+            background: transparent;
+            border: 2px solid var(--accent-red);
+            color: var(--text-light);
+            
+            padding: 15px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 12px;
+            
+            transition: all 0.3s ease-in-out;
+        }
+
+        .link-button i {
+            font-size: 1.3rem;
+        }
+
+        /* --- Eye-Catching Hover Effect --- */
+        .link-button:hover {
+            background: var(--accent-red);
+            color: var(--bg-dark);
+            transform: scale(1.05) translateY(-3px);
+            box-shadow: 0 0 25px rgba(219, 46, 64, 0.8);
+        }
+        
+        /* --- Footer --- */
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: var(--text-cream);
+            opacity: 0.6;
+        }
+
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        
+        <img src="https://i.postimg.cc/MnQBNjR2/IMG-20251025-123541.jpg" alt="Your Gaming Logo" class="logo-img">
+        
+        <h1>SF LEGACY</h1>
+        <p class="bio">
+        I’m SF LEGACY, a passionate ScarFall player focused on skill, strategy, and growth. Gaming isn’t just a hobby—it’s my legacy. 🎯
+
+
+        </p>
+
+        <nav class="links-container">
+            
+            <a href="https://www.instagram.com/prime.ckk" class="link-button" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+                Instagram
+            </a>
+            
+            <a href="https://discord.gg/a3bKXReND" class="link-button" target="_blank">
+                <i class="fa-brands fa-discord"></i>
+                Discord
+            </a>
+            
+            <a href="https://t.me/@SF_LEGACY" class="link-button" target="_blank">
+                <i class="fa-brands fa-telegram"></i>
+                Telegram
+            </a>
+            
+            <a href="https://aratt.ai/@ck_exploit" class="link-button" target="_blank">
+                <i class="fa-solid fa-comments"></i>
+                Arattai
+            </a>
+            
+            </nav>
+        
+        <footer class="footer">
+            © 2025. All rights reserved.
+        </footer>
+
+    </main>
+    
+</body>
+</html>
