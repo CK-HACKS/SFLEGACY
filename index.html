@@ -1,26 +1,26 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SF LEGACY</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=poppins:wght@400;600;700&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
-        /* --- Color Palette (Aapke image se) --- */
+        /* --- color palette (aapke image se) --- */
         :root {
-            --bg-dark: #0C0E0B;       /* Main Background */
-            --accent-red: #DB2E40;     /* Highlight Red */
-            --text-light: #DEF3FF;    /* Light Blue-White Text */
-            --text-cream: #FEFAEF;    /* Creamy White Text (for bio) */
+            --bg-dark: #0c0e0b;       /* main background */
+            --accent-blue: #2e7cdb;     /* highlight blue (changed from red) */
+            --text-light: #def3ff;    /* light blue-white text */
+            --text-cream: #fefaef;    /* creamy white text (for bio) */
         }
 
-        /* --- Basic Setup --- */
+        /* --- basic setup --- */
         * {
             margin: 0;
             padding: 0;
@@ -28,61 +28,61 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'poppins', sans-serif;
             background: var(--bg-dark);
             color: var(--text-light);
             
-            /* Dynamic Animated Gradient Background */
-            background: linear-gradient(-45deg, #0c0e0b, #1a0a0d, #0c0e0b, #300f14);
+            /* dynamic animated gradient background */
+            background: linear-gradient(-45deg, #0c0e0b, #0a111a, #0c0e0b, #0f1c30); /* blueish gradient */
             background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
+            animation: gradientbg 15s ease infinite;
             
-            /* Center content */
+            /* center content */
             display: grid;
             place-items: center;
             min-height: 100vh;
             padding: 20px;
         }
 
-        /* --- Keyframe for BG Animation --- */
-        @keyframes gradientBG {
+        /* --- keyframe for bg animation --- */
+        @keyframes gradientbg {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
 
-        /* --- Main Content Card --- */
+        /* --- main content card --- */
         .container {
             width: 100%;
             max-width: 450px;
             text-align: center;
             padding: 30px;
-            background: rgba(12, 14, 11, 0.5); /* Semi-transparent dark bg */
-            border: 1px solid rgba(219, 46, 64, 0.2); /* Faint red border */
+            background: rgba(12, 14, 11, 0.5); /* semi-transparent dark bg */
+            border: 1px solid rgba(46, 124, 219, 0.2); /* faint blue border */
             border-radius: 20px;
-            backdrop-filter: blur(10px); /* Glass effect */
+            backdrop-filter: blur(10px); /* glass effect */
             -webkit-backdrop-filter: blur(10px);
-            box-shadow: 0 8px 32px 0 rgba(219, 46, 64, 0.15); /* Soft red glow */
+            box-shadow: 0 8px 32px 0 rgba(46, 124, 219, 0.15); /* soft blue glow */
         }
 
-        /* --- Logo Image Styling --- */
+        /* --- logo image styling --- */
         .logo-img {
-            width: 120px;           /* Logo width */
-            height: 120px;          /* Logo height */
-            border-radius: 50%;     /* Makes it a perfect circle */
-            object-fit: cover;      /* Ensures image covers the circle without distortion */
-            border: 3px solid var(--accent-red); /* Red border around logo */
-            box-shadow: 0 0 20px rgba(219, 46, 64, 0.5); /* Red glow effect */
-            margin: 0 auto 20px auto; /* Centered with bottom margin */
-            display: block; /* Ensures proper centering */
+            width: 120px;           /* logo width */
+            height: 120px;          /* logo height */
+            border-radius: 50%;     /* makes it a perfect circle */
+            object-fit: cover;      /* ensures image covers the circle without distortion */
+            border: 3px solid var(--accent-blue); /* blue border around logo */
+            box-shadow: 0 0 20px rgba(46, 124, 219, 0.5); /* blue glow effect */
+            margin: 0 auto 20px auto; /* centered with bottom margin */
+            display: block; /* ensures proper centering */
         }
         
-        /* --- Text Content --- */
+        /* --- text content --- */
         h1 {
             font-size: 2.5rem;
             font-weight: 700;
             color: var(--text-light);
-            text-shadow: 0 0 15px rgba(219, 46, 64, 0.7);
+            text-shadow: 0 0 15px rgba(46, 124, 219, 0.7); /* blue text shadow */
         }
 
         .bio {
@@ -92,14 +92,14 @@
             line-height: 1.6;
         }
 
-        /* --- Link Buttons Container --- */
+        /* --- link buttons container --- */
         .links-container {
             display: flex;
             flex-direction: column;
             gap: 15px;
         }
 
-        /* --- Individual Link Button --- */
+        /* --- individual link button --- */
         .link-button {
             display: flex;
             align-items: center;
@@ -107,7 +107,7 @@
             gap: 10px;
             
             background: transparent;
-            border: 2px solid var(--accent-red);
+            border: 2px solid var(--accent-blue); /* blue border */
             color: var(--text-light);
             
             padding: 15px;
@@ -123,15 +123,15 @@
             font-size: 1.3rem;
         }
 
-        /* --- Eye-Catching Hover Effect --- */
+        /* --- eye-catching hover effect --- */
         .link-button:hover {
-            background: var(--accent-red);
+            background: var(--accent-blue); /* blue background on hover */
             color: var(--bg-dark);
             transform: scale(1.05) translateY(-3px);
-            box-shadow: 0 0 25px rgba(219, 46, 64, 0.8);
+            box-shadow: 0 0 25px rgba(46, 124, 219, 0.8); /* blue glow on hover */
         }
         
-        /* --- Footer --- */
+        /* --- footer --- */
         .footer {
             margin-top: 30px;
             font-size: 0.9rem;
@@ -145,11 +145,11 @@
 
     <main class="container">
         
-        <img src="https://i.postimg.cc/3RdrZnqW/kapkap-20251108220046925-sys.jpg" alt="Your Gaming Logo" class="logo-img">
+        <img src="https://i.postimg.cc/3RdrZnqW/kapkap-20251108220046925-sys.jpg" alt="your gaming logo" class="logo-img">
         
-        <h1>SF LEGACY</h1>
+        <h1>𝗦𝗙 𝗟𝗘𝗚𝗔𝗖𝗬</h1>
         <p class="bio">
-        I’m SF LEGACY, a passionate ScarFall player focused on skill, strategy, and growth. Gaming isn’t just a hobby—it’s my legacy. 🎯
+        I'm CK, a passionate scarfall player focused on skill, strategy, and growth. gaming isn’t just a hobby—it’s my legacy. 🎯
 
 
         </p>
@@ -158,28 +158,28 @@
             
             <a href="https://www.instagram.com/ckexploit" class="link-button" target="_blank">
                 <i class="fa-brands fa-instagram"></i>
-                Instagram
+                instagram
             </a>
             
-            <a href="https://discord.gg/a3bKXReND" class="link-button" target="_blank">
+            <a href="https://discord.gg/a3bkxrend" class="link-button" target="_blank">
                 <i class="fa-brands fa-discord"></i>
-                Discord
+                discord
             </a>
             
-            <a href="https://t.me/SF_LEGACY" class="link-button" target="_blank">
+            <a href="https://t.me/sf_legacy" class="link-button" target="_blank">
                 <i class="fa-brands fa-telegram"></i>
-                Telegram
+                telegram
             </a>
             
-            <a href="https://aratt.ai/@ck_exploit" class="link-button" target="_blank">
+            <a href="https://aratt.ai/ck_exploit" class="link-button" target="_blank">
                 <i class="fa-solid fa-comments"></i>
-                Arattai
+                arattai
             </a>
             
             </nav>
         
         <footer class="footer">
-            © 2025. All rights reserved.
+            © 2025. all rights reserved.
         </footer>
 
     </main>
